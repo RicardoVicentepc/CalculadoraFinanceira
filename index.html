@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="titulo">Calculadora Financeira</h1>
+        <div class="calculadora">
+            <p class="p_Frase">Insira a quantidade de vacinas perdidas no ano : </p><input id="ipt_qtdPerdaVacinasAno" type="number" min="0">
+            <p class="p_Frase">Insira o valor da vacina : </p><input id="ipt_valorVacina" type="number" min="0"><br>
+            <button class="btnCalcular" onclick="CalcularVacina()">Calcular</button>
+        </div>
+            <div class="DadosDoProjeto" id="ExibirSemProjeto"></div>
+            <div class="DadosDoProjeto" id="ExibirComProjeto"></div>
+    </div>
+</body>
+</html>
+<script>
+    function CalcularVacina(){
+        var qtdPerdaVacinasAno = Number(ipt_qtdPerdaVacinasAno.value);
+        var valorVacina = Number(ipt_valorVacina.value);
+        var PerdaDiaria = qtdPerdaVacinasAno / 365
+        var perdaReais = valorVacina * PerdaDiaria 
+        var perdaAnual = perdaReais * 365
+        console.log(perdaAnual)
+        ExibirSemProjeto.innerHTML = `Valor perdido por ano R$${perdaAnual}`
+        var valorComSolucao = perdaAnual * .15
+        var PerdaTotal = perdaAnual - valorComSolucao
+        ExibirComProjeto.innerHTML += `Você irá economizar com a nossa solução R$${valorComSolucao}, ou seja, você consegue economizar 15% com o nosso sistema. Mas continuará perdendo R$${PerdaTotal} por ano.`  
+    }
+</script>
