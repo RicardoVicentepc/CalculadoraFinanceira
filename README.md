@@ -32,7 +32,7 @@ economia p/ano - R$202500<br>
 <br><br>
 
 ## Como meu sistema está este momento.
-![Print Da Tela](https://user-images.githubusercontent.com/86174349/224874952-98fc04fb-45a8-4cc7-924b-a6857872626e.png)
+![Print Tela Project](https://user-images.githubusercontent.com/86174349/224876923-d94624dc-9763-4fef-b54b-fedddd697d43.png)
 
 
 ### Inicio do projeto
