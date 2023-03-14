@@ -34,7 +34,7 @@
 
                 <div class="inputs">
                     <p class="p_Frase">Selecione o tipo da vacina: </p>
-                    <select name="vacinas" id="ipt_NameVac">
+                    <select name="vacinas" id="ipt_NameVac" >
                         <option value="Default"></option>
                         <option value="BCG">BCG</option>
                         <option value="Febre Amarela">Febre Amarela</option>
@@ -65,7 +65,7 @@
 </html>
 <script>
     function CalcularVacina() {
-        var nomeVac = ipt_NameVac.values
+        var nomeVac = ipt_NameVac.value
         var TotalVacinas = Number(ipt_TotalVacinas.value);
         var valorVacina = Number(ipt_valorVacina.value);
 
@@ -77,9 +77,8 @@
         var perdaAnual = perdaMensal * 12
 
         //Com
-        var vacinasPoupadas = perdasVacinas * .75 / 100
+        var vacinasPoupadas = perdasVacinas * .75
         var poupadasMes = valorVacina * vacinasPoupadas
-
 
         var poupadasAno = poupadasMes * 12
 
