@@ -5,30 +5,34 @@ Projeto para calcular o quanto uma empresa perde com vacinas por ano e propor um
 
 #### Base Calculadora Financeira:
 
-1- Ter dois campos de inserção: valorVacina e qtdPerdaVacinasAno.<br>
-2- Calcular a perda Diaria por qtdPerdaVacinasAno / 365.<br>
-3- Calcular perda em reais: perdaReais =  valorVacina * perdaDiaria.<br> 
-4- Calcular o valor da perdaAnual:  perdaReais * 365.<br>
-5- Exibir na página: ‘Valor perdido por ano R$’ + perdaAnual.<br> 
-6- Calcular valorComSolucao : perdaAnual * .15.<br>
-7- Calcular valor que a empresa continuará perdendo : PerdaTotal =  perdaAnual - valorComSolução.<br> 
-8- Exibir na página: ‘Você irá economizar com a nossa solução R$’ + valorComSolução + “, ou seja, você consegue economizar 15% com o nosso sistema. Mas continuará perdendo R$” + PerdaTotal + "por ano."
-
+1- Ter três campos de inserção: valorVacina, TotalVacinas e nomeVacina.<br>
+2- Calcular a perda de vacinas = TotalVacinas * .45 .<br>
+3- Calcular perda mensal: perdaMensal = valorVacina * perdasVacinas.<br> 
+4- Calcular perda da perdaAnual:  perdaMensal * 12.<br>
+5- Calcular VacinasPoupadas : perdasVacinas * .75.<br>
+6- Calcular Vacinas poupadas mensalmente: poupadasMes = valorVacina * vacinasPoupadas
+7- Calcular Vacinas poupadas no ano: poupadaAno = poupadaMes * 12
 ## Um exemplo de como irá funcionar é: 
 
+## Valores Inseridos
+* 1000 vacinas
+* R$50 preço da vacina
+
 ### Sem nosso Projeto
-1000 / 365 = 2,7 vacinas perdidas por dia.<br>
-2,7 x 50 = R$136,9 reais perdidos por dia.<br>
-R$136,9 x 365 = R$50.000 de reais perdidos no ano.<br>
+Sem VacSense ❌💉<br>
+vacinas perdidas - 450<br>
+prejuízo p/mês - R$22500<br>
+prejuízo p/ano - R$270000<br>
 
 ### Com nosso projeto
-15% de R$50000 = R$7500 valor ecomizado.<br>
-R$50000 - R$7500 = R$42.500 valor que vai continuar sendo perdido por ano.<br>
-
+Com VacSense ✅💉<br>
+vacinas poupadas - 337.5<br>
+economia p/mês - R$16875<br>
+economia p/ano - R$202500<br>
 <br><br>
 
 ## Como meu sistema está este momento.
- ![Calculadora](https://user-images.githubusercontent.com/86174349/223598231-c3173fbb-f792-4bf7-95dd-6236d7bbf5a7.png)
+![Print Da Tela](https://user-images.githubusercontent.com/86174349/224874952-98fc04fb-45a8-4cc7-924b-a6857872626e.png)
 
 
 ### Inicio do projeto
