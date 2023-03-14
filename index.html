@@ -10,29 +10,96 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="titulo">Calculadora Financeira</h1>
-        <div class="calculadora">
-            <p class="p_Frase">Insira a quantidade de vacinas perdidas no ano : </p><input id="ipt_qtdPerdaVacinasAno" type="number" min="0">
-            <p class="p_Frase">Insira o valor da vacina : </p><input id="ipt_valorVacina" type="number" min="0"><br>
-            <button class="btnCalcular" onclick="CalcularVacina()">Calcular</button>
+    <div class="header">
+        <div class="container">
+            <img src="./img/logoVacSense.png" class="logo" alt="logo VacSense">
+
+
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">VacSense</a></li>
+                    <li><a href="#">Tecnologias</a></li>
+                    <li><a href="#">Cadastro</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="buttonNav" type="button">Área do Cliente</a></li>
+                </ul>
+            </div>
         </div>
-            <div class="DadosDoProjeto" id="ExibirSemProjeto"></div>
-            <div class="DadosDoProjeto" id="ExibirComProjeto"></div>
-    </div>
+        <div>
+
+            <div class="calculadora">
+
+                <div class="inputs">
+                    <p class="p_Frase">Selecione o tipo da vacina: </p>
+                    <select name="vacinas" id="ipt_NameVac">
+                        <option value="Default"></option>
+                        <option value="BCG">BCG</option>
+                        <option value="Febre Amarela">Febre Amarela</option>
+                        <option value="Hepatite B">Hepatite B</option>
+                        <option value="Tripllice Viral">Tripllice Viral</option>
+
+                    </select>
+                </div>
+                <div class="inputs">
+                    <p class="p_Frase">Insira a quantidade de vacinas : </p><input id="ipt_TotalVacinas" type="number"
+                        min="0">
+                </div>
+                <div class="inputs">
+                    <p class="p_Frase">Insira o valor da vacina : </p><input id="ipt_valorVacina" type="number" min="0">
+                </div>
+                <button class="btnCalcular" onclick="CalcularVacina()">Calcular</button>
+            </div>
+
+            <div class="FlexResul">
+                <div class="DadosDoProjeto" id="DadosDoProjetoSem"></div>
+                <div class="DadosDoProjeto" id="DadosDoProjeto"></div>
+                <div class="DadosDoProjeto" id="DadosDoProjetoCom"></div>
+
+            </div>
+        </div>
 </body>
+
 </html>
 <script>
-    function CalcularVacina(){
-        var qtdPerdaVacinasAno = Number(ipt_qtdPerdaVacinasAno.value);
+    function CalcularVacina() {
+        var nomeVac = ipt_NameVac.values
+        var TotalVacinas = Number(ipt_TotalVacinas.value);
         var valorVacina = Number(ipt_valorVacina.value);
-        var PerdaDiaria = qtdPerdaVacinasAno / 365
-        var perdaReais = valorVacina * PerdaDiaria 
-        var perdaAnual = perdaReais * 365
-        console.log(perdaAnual)
-        ExibirSemProjeto.innerHTML = `Valor perdido por ano R$${perdaAnual}`
-        var valorComSolucao = perdaAnual * .15
-        var PerdaTotal = perdaAnual - valorComSolucao
-        ExibirComProjeto.innerHTML += `Você irá economizar com a nossa solução R$${valorComSolucao}, ou seja, você consegue economizar 15% com o nosso sistema. Mas continuará perdendo R$${PerdaTotal} por ano.`  
+
+        //Sem
+        var perdasVacinas = TotalVacinas * .45 // total de vacinas 45%
+
+        var perdaMensal = valorVacina * perdasVacinas
+
+        var perdaAnual = perdaMensal * 12
+
+        //Com
+        var vacinasPoupadas = perdasVacinas * .75 / 100
+        var poupadasMes = valorVacina * vacinasPoupadas
+
+
+        var poupadasAno = poupadasMes * 12
+
+        DadosDoProjeto.innerHTML = `
+            tipo de vacina - ${nomeVac}<br>
+            total de vacina - ${TotalVacinas}<br>
+            valor da vacina - ${valorVacina}<br><br>
+        `
+        DadosDoProjetoSem.innerHTML = `
+        Sem VacSense ❌💉<br>
+            vacinas perdidas - ${perdasVacinas}<br><br>
+            prejuízo p/mês - R$${perdaMensal}<br>
+            prejuízo p/ano - R$${perdaAnual}<br><br>
+        `
+        DadosDoProjetoCom.innerHTML = `
+        Com VacSense ✅💉<br>
+            vacinas poupadas - ${vacinasPoupadas} <br><br>
+            economia p/mês - R$${poupadasMes} <br>
+            economia p/ano - R$${poupadasAno} <br><br>
+        `
+
     }
 </script>

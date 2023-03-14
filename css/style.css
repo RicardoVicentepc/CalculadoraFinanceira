@@ -1,24 +1,76 @@
 body
 {
-    background: #bbE5E1;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #c8f6f9;
 }
-input
+input, select
 {
-    padding: 5px;
     width: 25%;
     text-align: center;
     border-radius: 10px;
     color: #757575;
+    margin: 10px;
+    border: 1px solid #0f5c60;
 }
 
 /* Classes */
+.container{
+    width: 80%;
+    margin:auto;
+    display: flex;
+}
+.header .container{
+    justify-content: space-between;
+}
+.header a {
+    text-decoration: none;
+}
+.logo{
+    width: 30%;
+}
+.navbar{
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.buttonNav{
+    background: #177a80;
+    color: white;
+    font-size: 15px;
+    padding: 6px;
+    border-radius: 10px;
+}
+.buttonNav{
+    padding: 10px;
+}
+ul{
+    display: flex;
+}
+li:hover{
+    border-radius: 10px;
+    margin: 2px 1px;
+    opacity: 0.6;
+    transition: 0.3s;
+    }
+li{
+    list-style: none;  
+}
+li a{
+    color: #0f5c60;
+    font-weight: 500;
+    margin: 10px;
+}
 .p_Frase
 {
 font-size: medium;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-style: oblique;
 font-weight: bold;
-color: #ffffff;
+color: #000000;
 }
 .container
 {
@@ -26,38 +78,45 @@ color: #ffffff;
 }
 .titulo
 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #0f5c60;
+    width: fit-content;
+}
+.inputs{
+    display: flex;
 }
 .calculadora
 {
-    background-color: #3d989b;
+    margin-top: 80px;
     height: fit-content;
-    width: 600px;
-    margin-left: auto; /*Não passou*/
-    margin-right: auto; /*Não passou*/
-    border-radius: 75px;
-    border: 10px solid #91c8ca;
+    width: fit-content;
+    margin-left: auto; 
+    margin-right: auto; 
+    background: #b9f0f3ef;
+    border-radius: 15px;
+    padding: 10px;
 }
 .btnCalcular{
-    margin:20px;
     padding: 10px;
     width: 20%;
     border-color: #0f5c60;
     border-radius: 10px;
     background-color: #0f5c60;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-left: 80%;
 }
-/* id */
 .DadosDoProjeto{
-    background: #0f5c60;
+    margin-top: 10px;
+    padding-top: 10px;
+    background: #90f0f7;
     width: 320px;
+    border-radius: 30px;
     height: fit-content;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    color: white;
+    margin-bottom: 50;
+    color: rgb(0, 0, 0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.FlexResul{
+    display: flex;
 }
