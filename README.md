@@ -10,7 +10,7 @@ Projeto para calcular o quanto uma empresa perde com vacinas por ano e propor um
 3- Calcular perda mensal: perdaMensal = valorVacina * perdasVacinas.<br> 
 4- Calcular perda da perdaAnual:  perdaMensal * 12.<br>
 5- Calcular VacinasPoupadas : perdasVacinas * .75.<br>
-6- Calcular Vacinas poupadas mensalmente: poupadasMes = valorVacina * vacinasPoupadas
+6- Calcular Vacinas poupadas mensalmente: poupadasMes = valorVacina * vacinasPoupadas<br>
 7- Calcular Vacinas poupadas no ano: poupadaAno = poupadaMes * 12
 ## Um exemplo de como irá funcionar é: 
 
